@@ -84,6 +84,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/knowledge',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/bing/knowledge/index'),
+        name: '知识库',
+        meta: { title: '知识库', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
